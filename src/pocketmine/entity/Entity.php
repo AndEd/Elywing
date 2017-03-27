@@ -333,6 +333,13 @@ abstract class Entity extends Location implements Metadatable{
 
 	public $dropExp = [0, 0];
 
+	public function getEid() {
+		return $this->id;
+	}
+	
+	public function getId() {
+		return $this->getEid();
+	}
 
 	public function __construct(Chunk $chunk, CompoundTag $nbt){
 		if($chunk === null or $chunk->getProvider() === null){
